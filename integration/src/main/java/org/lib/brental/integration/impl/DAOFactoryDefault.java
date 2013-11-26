@@ -19,39 +19,66 @@ import org.lib.brental.integration.ZamestnanecDAO;
  */
 public class DAOFactoryDefault extends AbstractDAOFactory {
 
+    private AutoDAO autoDAO;
+    private FakturaDAO fakturaDAO;
+    private LodDAO lodDAO;
+    private RezervaceDAO rezervaceDAO;
+    private VybaveniDAO vybaveniDAO;
+    private ZakaznikDAO zakaznikDAO;
+    private ZamestnanecDAO zamestnanecDAO;
+    
+    
+    
     @Override
     public AutoDAO getAutoDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(autoDAO == null){
+            autoDAO = new AutoDAOimpl();
+        }
+        return autoDAO;
     }
 
     @Override
     public FakturaDAO getFakturaDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(fakturaDAO == null){
+            fakturaDAO = new FakuturaDAOimpl();
+        }
+        return fakturaDAO;
     }
 
     @Override
     public LodDAO getLodDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+if(lodDAO == null){
+            lodDAO = new LodDAOimpl();
+        }
+        return lodDAO;    }
 
     @Override
     public RezervaceDAO getRezervaceDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+if(rezervaceDAO == null){
+            rezervaceDAO = new RezervaceDAOimpl();
+        }
+        return rezervaceDAO;    }
 
     @Override
     public VybaveniDAO getVybaveniDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+if(vybaveniDAO == null){
+            vybaveniDAO = new VybaveniDAOimpl();
+        }
+        return vybaveniDAO;    }
 
     @Override
     public ZakaznikDAO getZakaznikDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+if(zakaznikDAO == null){
+            zakaznikDAO = new ZakaznikDAOimpl();
+        }
+        return zakaznikDAO;    }
 
     @Override
     public ZamestnanecDAO getZamestnanecDAO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+if(zamestnanecDAO == null){
+            zamestnanecDAO = new ZamestnanecDAOimpl();
+        }
+        return zamestnanecDAO;   
     }
     
 }
