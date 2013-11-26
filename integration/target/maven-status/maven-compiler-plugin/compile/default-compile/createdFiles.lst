@@ -1,0 +1,10 @@
+org\lib\brental\integration\LodDAO.class
+org\lib\brental\integration\Activator.class
+org\lib\brental\integration\AbstractDAOFactory.class
+org\lib\brental\integration\RezervaceDAO.class
+org\lib\brental\integration\AutoDAO.class
+org\lib\brental\integration\FakturaDAO.class
+org\lib\brental\integration\impl\DAOFactoryDefault.class
+org\lib\brental\integration\ZakaznikDAO.class
+org\lib\brental\integration\ZamestnanecDAO.class
+org\lib\brental\integration\VybaveniDAO.class
