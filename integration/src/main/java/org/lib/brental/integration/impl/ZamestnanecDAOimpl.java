@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import org.lib.brental.integration.ZamestnanecDAO;
+import org.lib.brental.model.Adresa;
 import org.lib.brental.model.Zamestnanec;
 import org.lib.brental.model.ZamestnanecId;
 import org.lib.brental.utils.BRentalException;
@@ -27,8 +28,8 @@ public class ZamestnanecDAOimpl implements ZamestnanecDAO {
         
     }
     
-    public Zamestnanec create(String jmeno, String funkce) throws BRentalException{
-        Zamestnanec zam = new Zamestnanec(new ZamestnanecId(idCount++), jmeno, funkce);
+    public Zamestnanec create(String jmeno,Adresa adresa, String funkce) throws BRentalException{
+        Zamestnanec zam = new Zamestnanec(new ZamestnanecId(idCount++), jmeno,adresa, funkce);
         zamestnanci.put(zam.getId(), zam);
         return zam;
     }

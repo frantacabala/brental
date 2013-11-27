@@ -16,7 +16,7 @@ import org.lib.brental.utils.BRentalException;
 public interface AutoDAO {
     public Auto create(String spz,int kapacita) throws BRentalException;
     public void delete(AutoId id) throws BRentalException;
-    public void update(Auto fak) throws BRentalException;
+    public void update(Auto aut) throws BRentalException;
     public Auto find (AutoId id) throws BRentalException;
     public Collection<Auto> getAll() throws BRentalException;
 }

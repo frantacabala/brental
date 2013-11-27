@@ -31,7 +31,7 @@ class RezervaceDAOimpl implements RezervaceDAO {
    
     
     
-    public void zarezervuj(RezervaceId id_rez, ZakaznikId id_zak, List<VybaveniId> vybaveni, List<LodId> lode, Date s, Date k) throws BRentalException{
+    public void vytvorRezervaci(ZakaznikId id_zak, List<VybaveniId> vybaveni, List<LodId> lode, Date s, Date k) throws BRentalException{
         Rezervace rez = new Rezervace(new RezervaceId(idCount++), id_zak, vybaveni, lode, s, k);
         rezervaceToId.put(rez.getId(),rez);
         
