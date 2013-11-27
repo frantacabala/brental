@@ -1,4 +1,4 @@
-package org.lib.brental.view;
+package org.lib.brental.gui;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

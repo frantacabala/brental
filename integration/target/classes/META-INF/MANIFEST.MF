@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1385440101709
+Bnd-LastModified: 1385552922836
 Build-Jdk: 1.7.0_45
 Built-By: john
 Bundle-Activator: org.lib.brental.integration.Activator
@@ -8,6 +8,6 @@ Bundle-Name: integration OSGi Bundle
 Bundle-SymbolicName: org.lib.brental.integration
 Bundle-Version: 1.0.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
-Import-Package: org.osgi.framework;version="[1.6,2)",org.osgi.util.track
- er;version="[1.5,2)"
+Import-Package: org.lib.brental.model,org.lib.brental.utils,org.osgi.fra
+ mework;version="[1.6,2)",org.osgi.util.tracker;version="[1.5,2)"
 Tool: Bnd-1.50.0

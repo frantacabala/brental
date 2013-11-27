@@ -13,7 +13,6 @@
         <module>utils</module>
         <module>model</module>
     <module>bussines</module>
-    <module>view</module>
-    <module>controller</module>
+    <module>gui</module>
   </modules>
 </project>

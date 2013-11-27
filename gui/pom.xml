@@ -8,11 +8,11 @@
   </parent>
 
     <groupId>org.lib.brental</groupId>
-    <artifactId>controller</artifactId>
+    <artifactId>gui</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
 
-    <name>controller OSGi Bundle</name>
+    <name>gui OSGi Bundle</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,6 +25,11 @@
             <version>4.3.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>utils</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -36,9 +41,18 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-Activator>org.lib.brental.controller.Activator</Bundle-Activator>
+                        <Bundle-Activator>org.lib.brental.gui.Activator</Bundle-Activator>
                         <Export-Package />
                     </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
                 </configuration>
             </plugin>
         </plugins>
