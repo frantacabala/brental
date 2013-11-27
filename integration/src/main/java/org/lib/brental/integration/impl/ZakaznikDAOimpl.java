@@ -18,7 +18,7 @@ import org.lib.brental.utils.BRentalException;
  *
  * @author john
  */
-public class ZakaznikDAOimpl extends ZakaznikDAO {
+public class ZakaznikDAOimpl implements ZakaznikDAO {
 
     private static int idCount;
     

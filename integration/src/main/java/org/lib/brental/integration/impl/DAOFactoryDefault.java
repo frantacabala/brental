@@ -26,12 +26,10 @@ public class DAOFactoryDefault extends AbstractDAOFactory {
     private VybaveniDAO vybaveniDAO;
     private ZakaznikDAO zakaznikDAO;
     private ZamestnanecDAO zamestnanecDAO;
-    
-    
-    
+
     @Override
     public AutoDAO getAutoDAO() {
-        if(autoDAO == null){
+        if (autoDAO == null) {
             autoDAO = new AutoDAOimpl();
         }
         return autoDAO;
@@ -39,7 +37,7 @@ public class DAOFactoryDefault extends AbstractDAOFactory {
 
     @Override
     public FakturaDAO getFakturaDAO() {
-        if(fakturaDAO == null){
+        if (fakturaDAO == null) {
             fakturaDAO = new FakuturaDAOimpl();
         }
         return fakturaDAO;
@@ -47,38 +45,41 @@ public class DAOFactoryDefault extends AbstractDAOFactory {
 
     @Override
     public LodDAO getLodDAO() {
-if(lodDAO == null){
+        if (lodDAO == null) {
             lodDAO = new LodDAOimpl();
         }
-        return lodDAO;    }
+        return lodDAO;
+    }
 
     @Override
     public RezervaceDAO getRezervaceDAO() {
-if(rezervaceDAO == null){
+        if (rezervaceDAO == null) {
             rezervaceDAO = new RezervaceDAOimpl();
         }
-        return rezervaceDAO;    }
+        return rezervaceDAO;
+    }
 
     @Override
     public VybaveniDAO getVybaveniDAO() {
-if(vybaveniDAO == null){
+        if (vybaveniDAO == null) {
             vybaveniDAO = new VybaveniDAOimpl();
         }
-        return vybaveniDAO;    }
+        return vybaveniDAO;
+    }
 
     @Override
     public ZakaznikDAO getZakaznikDAO() {
-if(zakaznikDAO == null){
+        if (zakaznikDAO == null) {
             zakaznikDAO = new ZakaznikDAOimpl();
         }
-        return zakaznikDAO;    }
+        return zakaznikDAO;
+    }
 
     @Override
     public ZamestnanecDAO getZamestnanecDAO() {
-if(zamestnanecDAO == null){
+        if (zamestnanecDAO == null) {
             zamestnanecDAO = new ZamestnanecDAOimpl();
         }
-        return zamestnanecDAO;   
+        return zamestnanecDAO;
     }
-    
 }

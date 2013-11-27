@@ -11,7 +11,7 @@ package org.lib.brental.model;
 public class Auto {
     private AutoId id;
     private String znacka;
-    private int kapacita;
+    private int kapacita; // kapacita v lodich
 
     public Auto(AutoId id, String znacka, int kapacita) {
         this.id = id;

@@ -4,10 +4,19 @@
  */
 package org.lib.brental.integration;
 
+import java.util.Collection;
+import org.lib.brental.model.Auto;
+import org.lib.brental.model.AutoId;
+import org.lib.brental.utils.BRentalException;
+
 /**
  *
  * @author john
  */
-public class AutoDAO {
-    
+public interface AutoDAO {
+    public Auto create(String spz,int kapacita) throws BRentalException;
+    public void delete(AutoId id) throws BRentalException;
+    public void update(Auto fak) throws BRentalException;
+    public Auto find (AutoId id) throws BRentalException;
+    public Collection<Auto> getAll() throws BRentalException;
 }

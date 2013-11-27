@@ -8,6 +8,6 @@ package org.lib.brental.integration;
  *
  * @author john
  */
-public class RezervaceDAO {
+public interface RezervaceDAO {
     
 }

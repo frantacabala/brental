@@ -17,7 +17,7 @@ import org.lib.brental.utils.BRentalException;
  *
  * @author john
  */
-public class ZamestnanecDAOimpl extends ZamestnanecDAO {
+public class ZamestnanecDAOimpl implements ZamestnanecDAO {
 
     private Map<ZamestnanecId,Zamestnanec> zamestnanci = new ConcurrentHashMap<ZamestnanecId, Zamestnanec>();
     private static int idCount;

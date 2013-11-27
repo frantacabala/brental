@@ -4,10 +4,24 @@
  */
 package org.lib.brental.integration;
 
+import java.util.Collection;
+import org.lib.brental.model.Zamestnanec;
+import org.lib.brental.model.ZamestnanecId;
+import org.lib.brental.utils.BRentalException;
+
 /**
  *
  * @author john
  */
-public class ZamestnanecDAO {
+public interface ZamestnanecDAO {
+     public Zamestnanec create(String jmeno, String funkce) throws BRentalException;
+    
+    public void delete(ZamestnanecId id) throws BRentalException;
+    
+    public void update(Zamestnanec zam) throws BRentalException;
+    
+    public Zamestnanec find(ZamestnanecId id) throws BRentalException;
+    
+    public Collection<Zamestnanec> getAll() throws BRentalException;
     
 }

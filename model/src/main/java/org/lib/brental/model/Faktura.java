@@ -21,6 +21,14 @@ public class Faktura {
         this.id_rez = id_rez;
         datum=new Date();
     }
+
+    public FakturaId getId() {
+        return id;
+    }
+
+    public RezervaceId getId_rez() {
+        return id_rez;
+    }
     
     
     
