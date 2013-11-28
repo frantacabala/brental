@@ -11,12 +11,16 @@ package org.lib.brental.model;
 public class Zakaznik {
     private ZakaznikId id;
     private String jmeno;
+    private String prijimeni;
     private Adresa adresa;
+    private int cislo_op;
     
-    public Zakaznik(ZakaznikId id,String jmeno, Adresa adresa){
+    public Zakaznik(ZakaznikId id,String jmeno,String prijimeni, Adresa adresa, int cislo_op){
         this.id=id;
         this.jmeno=jmeno;
+        this.prijimeni=prijimeni;
         this.adresa=adresa;
+        this.cislo_op=cislo_op;
     }
 
     public ZakaznikId getId() {

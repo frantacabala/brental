@@ -6,12 +6,14 @@ package org.lib.brental.integration.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import org.lib.brental.integration.FakturaDAO;
 import org.lib.brental.model.Faktura;
 import org.lib.brental.model.FakturaId;
 import org.lib.brental.model.RezervaceId;
+import org.lib.brental.model.ZamestnanecId;
 import org.lib.brental.utils.BRentalException;
 
 /**
@@ -29,8 +31,8 @@ class FakuturaDAOimpl implements FakturaDAO {
     
     
     
-    public Faktura create(RezervaceId id) throws BRentalException{
-        Faktura fak = new Faktura(new FakturaId(idCount++), id);
+    public Faktura create(RezervaceId id, ZamestnanecId id_zam, Date datum_vystaveni, Date datum_splatnosti) throws BRentalException{
+        Faktura fak = new Faktura(new FakturaId(idCount++), id, id_zam, datum_vystaveni, datum_splatnosti);
         faktury.put(fak.getId(), fak);
         return fak;
     }

@@ -6,6 +6,7 @@ package org.lib.brental.integration.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import org.lib.brental.integration.AutoDAO;
@@ -27,8 +28,8 @@ class AutoDAOimpl implements AutoDAO {
     
     
     
-    public Auto create(String spz, int kapacita) throws BRentalException{
-        Auto fak = new Auto(new AutoId(idCount++), spz,kapacita);
+    public Auto create(String spz, int kapacita,int cena_zakoupeni, Date datum_zakoupeni) throws BRentalException{
+        Auto fak = new Auto(new AutoId(idCount++), spz,kapacita,cena_zakoupeni,datum_zakoupeni);
         auta.put(fak.getId(), fak);
         return fak;
     }

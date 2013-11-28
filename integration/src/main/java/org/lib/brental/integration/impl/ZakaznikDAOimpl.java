@@ -27,8 +27,8 @@ public class ZakaznikDAOimpl implements ZakaznikDAO {
     public ZakaznikDAOimpl() {
     }
     
-    public Zakaznik create(String jmeno, Adresa adresa) throws BRentalException{
-        Zakaznik zak = new Zakaznik(new ZakaznikId(idCount++), jmeno, adresa);
+    public Zakaznik create(String jmeno,String prijimeni, Adresa adresa,int cislo_op) throws BRentalException{
+        Zakaznik zak = new Zakaznik(new ZakaznikId(idCount++), jmeno, prijimeni,adresa,cislo_op);
         zakaznici.put(zak.getId(), zak);
         return zak;
     }

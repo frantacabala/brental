@@ -28,8 +28,8 @@ public class ZamestnanecDAOimpl implements ZamestnanecDAO {
         
     }
     
-    public Zamestnanec create(String jmeno,Adresa adresa, String funkce) throws BRentalException{
-        Zamestnanec zam = new Zamestnanec(new ZamestnanecId(idCount++), jmeno,adresa, funkce);
+    public Zamestnanec create(String jmeno,String prijimeni,String login,String heslo,Adresa adresa, String funkce) throws BRentalException{
+        Zamestnanec zam = new Zamestnanec(new ZamestnanecId(idCount++), jmeno,prijimeni,login,heslo,adresa, funkce);
         zamestnanci.put(zam.getId(), zam);
         return zam;
     }

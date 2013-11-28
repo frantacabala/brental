@@ -15,28 +15,46 @@ import java.util.List;
 public class Rezervace {
     private RezervaceId id;
     private ZakaznikId id_zak;
+    private FakturaId id_fak;
+    private ZamestnanecId id_zam;
+    private boolean stav; // true - schvalena, false - cekajici
     private List<VybaveniId> vybaveni;
-    private List<LodId> lode;
+    
     private Date datum_start;
     private Date datum_konec;
     
-    public Rezervace(RezervaceId id, ZakaznikId id_zak, List<VybaveniId> vybaveni, List<LodId> lode,Date ds, Date dk) {
+    public Rezervace(RezervaceId id, ZakaznikId id_zak,ZamestnanecId id_zam,FakturaId id_fak, List<VybaveniId> vybaveni,Date ds, Date dk) {
         this.id = id;
         this.id_zak = id_zak;
+        this.id_fak=id_fak;
+        this.id_zam=id_zam;
         this.vybaveni = vybaveni;
-        this.lode = lode;
         this.datum_start = ds;
         this.datum_konec=dk;
+        this.stav=false;
+        
+    }
+
+    public boolean getStav() {
+        return stav;
+    }
+
+    public FakturaId getId_fak() {
+        return id_fak;
+    }
+
+    public ZamestnanecId getId_zam() {
+        return id_zam;
+    }
+
+    public void setStav(boolean stav) {
+        this.stav = stav;
     }
     
     public int getPocVybav(){
         return vybaveni.size();
     }
     
-    public int getPocLodi(){
-        return lode.size();
-    }
-
     public RezervaceId getId() {
         return id;
     }
@@ -48,11 +66,7 @@ public class Rezervace {
     public List<VybaveniId> getVybaveni() {
         return vybaveni;
     }
-
-    public List<LodId> getLode() {
-        return lode;
-    }
-
+   
     public Date getDatum_start() {
         return datum_start;
     }

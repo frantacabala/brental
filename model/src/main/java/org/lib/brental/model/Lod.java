@@ -4,30 +4,60 @@
  */
 package org.lib.brental.model;
 
+import java.util.Date;
+
 /**
  *
  * @author john
  */
-public class Lod {
-    private LodId id;
-    private String typ;
-    private int kapacita; // pocet lidi kolik se do ni vejde
+public class Lod extends Vybaveni<Lod> {
 
-    public Lod(LodId id, String typ, int kapacita) {
-        this.id = id;
+    private int delka;
+    private int max_ponor;
+    private String model;
+    private int nostnost;
+    private int sirka;
+    private String typ;
+    private String vyrobce;
+
+    public Lod(VybaveniId id, String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha,
+            int delka, int max_ponor, String model, int nostnost, int sirka, String typ, String vyrobce) {
+        super(id, nazev, nakup_cena, datum_nakup, barva, pujc_cena, vaha);
+        this.delka = delka;
+        this.max_ponor = max_ponor;
+        this.model = model;
+        this.nostnost = nostnost;
+        this.sirka = sirka;
         this.typ = typ;
-        this.kapacita = kapacita;
+        this.vyrobce = vyrobce;
+
     }
 
-    public LodId getId() {
-        return id;
+    public int getDelka() {
+        return delka;
+    }
+
+    public int getMax_ponor() {
+        return max_ponor;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getNostnost() {
+        return nostnost;
+    }
+
+    public int getSirka() {
+        return sirka;
     }
 
     public String getTyp() {
         return typ;
     }
 
-    public int getKapacita() {
-        return kapacita;
+    public String getVyrobce() {
+        return vyrobce;
     }
 }

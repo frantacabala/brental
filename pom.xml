@@ -14,5 +14,7 @@
         <module>model</module>
     <module>bussines</module>
     <module>gui</module>
+    <module>controller</module>
+    <module>database</module>
   </modules>
 </project>

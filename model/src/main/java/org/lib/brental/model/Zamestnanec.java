@@ -11,14 +11,20 @@ package org.lib.brental.model;
 public class Zamestnanec {
     private ZamestnanecId id;
     private String jmeno;
+    private String prijimeni;
+    private String login;
+    private String heslo;
     private Adresa adresa;
-    private String funkce;
+    private String pracovni_pozice;
 
-    public Zamestnanec(ZamestnanecId id, String jmeno,Adresa adresa, String funkce) {
+    public Zamestnanec(ZamestnanecId id, String jmeno,String prijimeni,String login, String heslo,Adresa adresa, String funkce) {
         this.id = id;
         this.jmeno = jmeno;
+        this.prijimeni=prijimeni;
+        this.login=login;
+        this.heslo=heslo;
         this.adresa=adresa;
-        this.funkce = funkce;
+        this.pracovni_pozice = funkce;
     }
 
     public ZamestnanecId getId() {
@@ -30,7 +36,7 @@ public class Zamestnanec {
     }
 
     public String getFunkce() {
-        return funkce;
+        return pracovni_pozice;
     }
     
     

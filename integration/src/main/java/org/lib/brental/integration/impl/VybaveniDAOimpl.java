@@ -6,9 +6,11 @@ package org.lib.brental.integration.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import org.lib.brental.integration.VybaveniDAO;
+import org.lib.brental.model.Padlo;
 import org.lib.brental.model.Vybaveni;
 import org.lib.brental.model.VybaveniId;
 import org.lib.brental.utils.BRentalException;
@@ -25,8 +27,8 @@ public class VybaveniDAOimpl implements VybaveniDAO {
     public VybaveniDAOimpl() {
     }
 
-    public Vybaveni create(String nazev,int pocet,String velikost) throws BRentalException{
-        Vybaveni vyb = new Vybaveni(new VybaveniId(idCount++), nazev, pocet,velikost);
+    public Vybaveni create(VybaveniId id, String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha) throws BRentalException{
+        Vybaveni vyb = new VybaveniImpl(new VybaveniId("VY"+Integer.toString(idCount++)),nazev,nakup_cena,datum_nakup,barva,pujc_cena,vaha);
         vybaveni.put(vyb.getId(), vyb);
         return vyb;
     }
@@ -46,6 +48,13 @@ public class VybaveniDAOimpl implements VybaveniDAO {
     
     public Collection<Vybaveni> getAll() throws BRentalException{
         return new ArrayList<Vybaveni>(vybaveni.values());
+    }
+
+    private static class VybaveniImpl extends Vybaveni<VybaveniImpl> {
+
+        public VybaveniImpl(VybaveniId id, String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha) {
+            super(id, nazev, nakup_cena, datum_nakup, barva, pujc_cena, vaha);
+        }
     }
     
 }

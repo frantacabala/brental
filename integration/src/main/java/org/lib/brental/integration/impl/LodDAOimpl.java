@@ -6,11 +6,12 @@ package org.lib.brental.integration.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import org.lib.brental.integration.LodDAO;
 import org.lib.brental.model.Lod;
-import org.lib.brental.model.LodId;
+import org.lib.brental.model.VybaveniId;
 import org.lib.brental.utils.BRentalException;
 
 /**
@@ -24,17 +25,20 @@ class LodDAOimpl implements LodDAO {
     
     private static int idCount;
     
-    private Map<LodId,Lod> lode = new ConcurrentHashMap<LodId, Lod>();
+    private Map<VybaveniId,Lod> lode = new ConcurrentHashMap<VybaveniId, Lod>();
     
     
     
-    public Lod create(String typ, int kapacita) throws BRentalException{
-        Lod lod = new Lod(new LodId(idCount++), typ, kapacita);
+    public Lod create(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha,
+            int delka, int max_ponor, String model, int nostnost, int sirka, String typ, String vyrobce) throws BRentalException{
+        
+        Lod lod = new Lod(new VybaveniId("LO"+Integer.toString(idCount++)), nazev,  nakup_cena,  datum_nakup,  barva,  pujc_cena,  vaha,
+             delka,  max_ponor,  model,  nostnost,  sirka,  typ,  vyrobce);
         lode.put(lod.getId(), lod);
         return lod;
     }
     
-    public void delete(LodId id) throws BRentalException{
+    public void delete(VybaveniId id) throws BRentalException{
         lode.remove(id);
     }
    
@@ -42,7 +46,7 @@ class LodDAOimpl implements LodDAO {
         lode.put(lod.getId(), lod);
     }
     
-    public Lod find(LodId id) throws BRentalException{
+    public Lod find(VybaveniId id) throws BRentalException{
         return lode.get(id);
         
     }

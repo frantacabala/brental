@@ -8,7 +8,10 @@ import org.lib.brental.integration.AbstractDAOFactory;
 import org.lib.brental.integration.AutoDAO;
 import org.lib.brental.integration.FakturaDAO;
 import org.lib.brental.integration.LodDAO;
+import org.lib.brental.integration.OtherDAO;
+import org.lib.brental.integration.PadloDAO;
 import org.lib.brental.integration.RezervaceDAO;
+import org.lib.brental.integration.VestaDAO;
 import org.lib.brental.integration.VybaveniDAO;
 import org.lib.brental.integration.ZakaznikDAO;
 import org.lib.brental.integration.ZamestnanecDAO;
@@ -26,6 +29,9 @@ public class DAOFactoryDefault extends AbstractDAOFactory {
     private VybaveniDAO vybaveniDAO;
     private ZakaznikDAO zakaznikDAO;
     private ZamestnanecDAO zamestnanecDAO;
+    private VestaDAO vestaDAO;
+    private OtherDAO otherDAO;
+    private PadloDAO padloDAO;
 
     @Override
     public AutoDAO getAutoDAO() {
@@ -81,5 +87,30 @@ public class DAOFactoryDefault extends AbstractDAOFactory {
             zamestnanecDAO = new ZamestnanecDAOimpl();
         }
         return zamestnanecDAO;
+    }
+
+    @Override
+    public VestaDAO getVestaDAO() {
+       if(vestaDAO == null){
+           vestaDAO = new VestaDAOimpl();
+           
+       } 
+       return vestaDAO;
+    }
+
+    @Override
+    public OtherDAO getOtherDAO() {
+    if(otherDAO == null){
+        otherDAO = new OtherDAOimpl();
+    }    
+    return otherDAO;
+    }
+
+    @Override
+    public PadloDAO getPadloDAO() {
+  if(padloDAO == null){
+      padloDAO=new PadloDAOimpl();
+  }
+  return padloDAO;
     }
 }

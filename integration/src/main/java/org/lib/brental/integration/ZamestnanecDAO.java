@@ -15,7 +15,7 @@ import org.lib.brental.utils.BRentalException;
  * @author john
  */
 public interface ZamestnanecDAO {
-     public Zamestnanec create(String jmeno,Adresa adresa, String funkce) throws BRentalException;
+     public Zamestnanec create(String jmeno,String prijimeni,String login,String heslo,Adresa adresa, String funkce) throws BRentalException;
     
     public void delete(ZamestnanecId id) throws BRentalException;
     

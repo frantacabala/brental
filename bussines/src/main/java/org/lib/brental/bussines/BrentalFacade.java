@@ -32,7 +32,7 @@ public abstract class BrentalFacade {
     }
     
     // operations for car 
-    public abstract Auto vytvorAuto(String spz,int kapacita) throws BRentalException;
+    public abstract Auto vytvorAuto(String spz,int kapacita,int cena_zakoupeni, Date datum_zakoupeni) throws BRentalException;
     
     public abstract void smazAuto(AutoId id) throws BRentalException;
     
@@ -42,7 +42,7 @@ public abstract class BrentalFacade {
     
     
     //operations for facture
-    public abstract Faktura vytvorFakturu(RezervaceId id) throws BRentalException;
+    public abstract Faktura vytvorFakturu(RezervaceId id, ZamestnanecId id_zam, Date datum_vystaveni, Date datum_splatnosti) throws BRentalException;
     
     public abstract void smazFakturu(FakturaId id ) throws BRentalException;
     
@@ -53,9 +53,10 @@ public abstract class BrentalFacade {
     
     //operations for boat
     
-    public abstract Lod vytvorLod(String typ, int kapacita) throws BRentalException;
+    public abstract Lod vytvorLod(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha,
+            int delka, int max_ponor, String model, int nostnost, int sirka, String typ, String vyrobce) throws BRentalException;
     
-    public abstract void smazLod(LodId id) throws BRentalException;
+    public abstract void smazLod(VybaveniId id) throws BRentalException;
     
     public abstract void aktualizujLod(Lod lod) throws BRentalException;
     
@@ -63,13 +64,17 @@ public abstract class BrentalFacade {
     
     //operations for rezervation
     
-    public abstract void vytvorRezervaci(ZakaznikId id, List<VybaveniId> vybaveni, List<LodId> lode, Date s, Date k) throws BRentalException;
-    
-    public abstract void zrusRezervaci(ZakaznikId id) throws BRentalException;
-    
+    public abstract void vytvorRezervaci(ZakaznikId id_zak, ZamestnanecId id_zam, FakturaId id_fak, List<VybaveniId> vybaveni, Date ds, Date dk) throws BRentalException;
+
+    public abstract void zrusRezervaci(RezervaceId id) throws BRentalException;
+
+    public abstract void prijmiRezervaci(Rezervace rez) throws BRentalException;
+
+    public abstract Collection<VybaveniId> getVybaveni(Rezervace rez) throws BRentalException;
+
     public abstract Collection<Rezervace> getRezervace() throws BRentalException;
     
-    
+    /*
     public abstract Vybaveni vytvorVybaveni(String nazev, int pocet, String velikost) throws BRentalException;
     
     public abstract void smazVybaveni(VybaveniId id) throws BRentalException;
@@ -77,9 +82,42 @@ public abstract class BrentalFacade {
     public abstract void aktualizujVybaveni(Vybaveni vyb) throws BRentalException;
     
     public abstract Collection<Vybaveni> getVybaveni() throws BRentalException;
+    */
+    
+    public abstract Vesta vytvorVestu(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena,
+                                        int vaha, String typ, String velikost, String vyrobce) throws BRentalException;
+    
+    public abstract void smazVestu(VybaveniId id) throws BRentalException;
+    
+    public abstract void aktualizujVestu(Vesta vest) throws BRentalException;
+    
+    public abstract Collection<Vesta> getVesty() throws BRentalException;
     
     
-    public abstract Zakaznik vytvorZakaznika(String jmeno, Adresa adresa) throws BRentalException;
+    
+    public abstract Padlo vytvorPadlo(String nazev, int nakup_cena, Date datum_nakup, String barva, 
+                        int pujc_cena, int vaha, int delka, int sirka_listu,String typ) throws BRentalException;
+    
+    public abstract void smazPadlo(VybaveniId id) throws BRentalException;
+    
+    public abstract void aktualizujPadlo(Padlo padlo) throws BRentalException;
+    
+    public abstract Collection<Padlo> getPadla() throws BRentalException;
+    
+    
+    
+    public abstract Other vytvorOther(String nazev, int nakup_cena, Date datum_nakup, String barva, 
+                                       int pujc_cena, int vaha, String poznamka) throws BRentalException;
+    
+    public abstract void smazOther(VybaveniId id) throws BRentalException;
+    
+    public abstract void aktualizujOther(Other other) throws BRentalException;
+    
+    public abstract Collection<Other> getOther() throws BRentalException;
+    
+    
+    
+    public abstract Zakaznik vytvorZakaznika(String jmeno,String prijimeni, Adresa adresa, int cislo_op) throws BRentalException;
     
     public abstract void smazZakanika(ZakaznikId id) throws BRentalException;
     
@@ -89,7 +127,7 @@ public abstract class BrentalFacade {
     
     
     
-    public abstract Zamestnanec vytvorZamestnance(String jmeno, Adresa adresa, String funkce) throws BRentalException;
+    public abstract Zamestnanec vytvorZamestnance(String jmeno,String prijimeni,String login, String heslo,Adresa adresa, String funkce) throws BRentalException;
     
     public abstract void smazZamestnance(ZamestnanecId id) throws BRentalException;
     

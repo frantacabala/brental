@@ -33,6 +33,12 @@ public abstract class AbstractDAOFactory {
     
     public abstract ZamestnanecDAO getZamestnanecDAO();
     
+    public abstract VestaDAO getVestaDAO();
+    
+    public abstract OtherDAO getOtherDAO();
+    
+    public abstract PadloDAO getPadloDAO();
+    
     public static AbstractDAOFactory getDefault(){
         if(instance == null){
             instance = (AbstractDAOFactory)st.getService();
