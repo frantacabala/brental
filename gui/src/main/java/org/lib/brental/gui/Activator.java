@@ -6,7 +6,8 @@ import org.osgi.framework.BundleContext;
 public class Activator implements BundleActivator {
 
     public void start(BundleContext context) throws Exception {
-        // TODO add activation code here
+        MainFrame.getInstance().setContext(context);
+        MainFrame.getInstance().setVisible(true);
     }
 
     public void stop(BundleContext context) throws Exception {

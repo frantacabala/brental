@@ -41,7 +41,7 @@ public abstract class AbstractDAOFactory {
     
     public static AbstractDAOFactory getDefault(){
         if(instance == null){
-            instance = (AbstractDAOFactory)st.getService();
+            //instance = (AbstractDAOFactory)st.getService();
             if(instance == null){
                 instance = new DAOFactoryDefault();
             }

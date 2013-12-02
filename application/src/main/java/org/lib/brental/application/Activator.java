@@ -13,7 +13,7 @@ public class Activator implements BundleActivator {
 
             public void run() {
               MainFrame.getInstance().setContext(context);
-              //MainFrame.getInstance().setVisible(true);
+              MainFrame.getInstance().setVisible(true);
               
             }
         });

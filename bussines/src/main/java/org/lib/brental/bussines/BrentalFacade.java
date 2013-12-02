@@ -23,7 +23,7 @@ public abstract class BrentalFacade {
 
     public static BrentalFacade getDefault() {
         if (brentalFacade == null) {
-            brentalFacade = (BrentalFacade) st.getService();
+           // brentalFacade = (BrentalFacade) st.getService();
             if (brentalFacade == null) {
                 brentalFacade = new BrentalFacadeDefault();
             }

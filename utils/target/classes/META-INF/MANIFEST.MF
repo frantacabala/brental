@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1385559692263
-Build-Jdk: 1.7.0_45
+Bnd-LastModified: 1385981852168
+Build-Jdk: 1.7.0_25
 Built-By: john
 Bundle-Activator: org.lib.brental.utils.Activator
 Bundle-ManifestVersion: 2
@@ -8,5 +8,7 @@ Bundle-Name: utils OSGi Bundle
 Bundle-SymbolicName: org.lib.brental.utils
 Bundle-Version: 1.0.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
+Export-Package: org.lib.brental.utils;uses:="org.osgi.framework";version
+ ="1.0.0.SNAPSHOT"
 Import-Package: org.osgi.framework;version="[1.6,2)"
 Tool: Bnd-1.50.0

@@ -5,6 +5,7 @@
 package org.lib.brental.utils;
 
 import java.text.MessageFormat;
+import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -24,7 +25,7 @@ public enum Messages {
     BRental;
     
     public String getM(Object ... args){
-        ResourceBundle bnd = ResourceBundle.getBundle("org,=.lib.brental.messages");
+        ResourceBundle bnd = ResourceBundle.getBundle("org.lib.brental.utils.Messages",Locale.getDefault());
         try{
             String tmpl = bnd.getString(name());
             return MessageFormat.format(tmpl, args);

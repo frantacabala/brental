@@ -15,6 +15,12 @@ import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 import org.lib.brental.gui.impl.Refreshable;
+import org.lib.brental.model.Auto;
+import org.lib.brental.model.Faktura;
+import org.lib.brental.model.Rezervace;
+import org.lib.brental.model.Vybaveni;
+import org.lib.brental.model.Zakaznik;
+import org.lib.brental.model.Zamestnanec;
 import org.lib.brental.utils.BRentalException;
 import org.lib.brental.utils.Messages;
 import org.osgi.framework.Bundle;
@@ -54,10 +60,11 @@ public class MainFrame extends JFrame {
     }
     
     public MainFrame(){
-        super(Messages.BRental.getM());
-        //setJMenuBar(menuBar = new JMenuBar());
+        //super(Messages.BRental.getM());
+        super("Brental");
+        setJMenuBar(menuBar = new JMenuBar());
         
-        //add(mainPanel = new MainPanel());
+        add(mainPanel = new MainPanel());
         
         addWindowListener(new WindowAdapter() {
         
@@ -96,6 +103,42 @@ public class MainFrame extends JFrame {
     public void setContext(BundleContext context){
         this.context = context;
     }
+    
+    
+    public Zamestnanec getSelectedZamestnanec(){
+       return null;
+       
+   }
+   
+   public Zakaznik getSelectedZakaznik(){
+       return null;
+       
+   }
+   
+   public Vybaveni getSelectedVybaveni(){
+       return null;
+       
+   }
+    
+   public Rezervace getSelectedRezervace(){
+       return null;
+       
+   }
+   
+   public Faktura getSelectedFaktura(){
+       return null;
+       
+   }
+   
+   public Auto getSelectedAuto(){
+       return null;
+       
+   }
+
+    public void actionsNotif() {
+   for (SetEnable te : tec) {
+            te.setEnable();
+        } }
     
     
     

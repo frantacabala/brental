@@ -25,6 +25,17 @@
             <version>4.3.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>gui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.lib.brental</groupId>
+            <artifactId>bussines</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 
     <build>
@@ -37,7 +48,8 @@
                 <configuration>
                     <instructions>
                         <Bundle-Activator>org.lib.brental.controller.Activator</Bundle-Activator>
-                        <Export-Package />
+                        <Export-Package >org.lib.brental.controller,org.lib.brental.controller.actions</Export-Package>
+                        <Private-Package>org.lib.brental.controller.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>

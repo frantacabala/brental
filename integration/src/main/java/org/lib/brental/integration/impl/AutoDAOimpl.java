@@ -21,6 +21,12 @@ import org.lib.brental.utils.BRentalException;
 class AutoDAOimpl implements AutoDAO {
 
     public AutoDAOimpl() {
+        try{
+        create("1232-sds",3,1423,new Date());
+        create("asdasd32-sds",3,1423,new Date());
+        }catch (BRentalException br){
+            
+        }
     }
     private static int idCount;
     

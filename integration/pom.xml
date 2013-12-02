@@ -52,7 +52,8 @@
                 <configuration>
                     <instructions>
                         <Bundle-Activator>org.lib.brental.integration.Activator</Bundle-Activator>
-                        <Export-Package/>
+                        <Export-Package>org.lib.brental.integration,org.lib.brental.integration.impl</Export-Package>
+                        <Private-Package>org.lib.brental.integration.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>

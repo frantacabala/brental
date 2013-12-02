@@ -32,7 +32,8 @@
                 <configuration>
                     <instructions>
                         <Bundle-Activator>org.lib.brental.utils.Activator</Bundle-Activator>
-                        <Export-Package/>
+                        <Export-Package>org.lib.brental.utils</Export-Package>
+                        <Private-Package>org.lib.brental.utils.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>
