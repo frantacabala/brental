@@ -42,6 +42,12 @@
             <version>1.0-SNAPSHOT</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>contr</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 
     <build>
@@ -54,7 +60,8 @@
                 <configuration>
                     <instructions>
                         <Bundle-Activator>org.lib.brental.gui.Activator</Bundle-Activator>
-                        <Export-Package />
+                        <Export-Package >org.lib.brental.gui,org.lib.brental.gui.impl</Export-Package>
+                        <Private-Package>org.lib.brental.gui.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>

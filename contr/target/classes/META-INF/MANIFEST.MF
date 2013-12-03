@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1386110462709
+Build-Jdk: 1.7.0_45
+Built-By: john
+Bundle-Activator: org.lib.brental.contr.Activator
+Bundle-ManifestVersion: 2
+Bundle-Name: contr OSGi Bundle
+Bundle-SymbolicName: org.lib.brental.contr
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.lib.brental.contr;uses:="org.osgi.framework";version
+ ="1.0.0.SNAPSHOT",org.lib.brental.contr.actions;uses:="org.lib.brental.
+ gui,javax.swing,org.lib.brental.contr.dialogs";version="1.0.0.SNAPSHOT"
+ ,org.lib.brental.contr.dialogs;uses:="javax.swing,org.lib.brental.gui,o
+ rg.lib.brental.bussines,org.lib.brental.model,org.lib.brental.utils,jav
+ ax.swing.event,javax.swing.text";version="1.0.0.SNAPSHOT"
+Import-Package: javax.swing,javax.swing.event,javax.swing.text,org.lib.b
+ rental.bussines;version="[1.0,2)",org.lib.brental.gui;version="[1.0,2)"
+ ,org.lib.brental.model;version="[1.0,2)",org.lib.brental.utils;version=
+ "[1.0,2)",org.osgi.framework;version="[1.6,2)"
+Tool: Bnd-1.50.0

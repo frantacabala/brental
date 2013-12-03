@@ -68,24 +68,26 @@ public class AutoModel extends AbstractTableModel implements Refreshable {
                 assert false;
                 return null;
         }}
-    /*
+    
      @Override
     public String getColumnName(int col) {
-        Auto a;
-        a=new Auto();
-        a.
          switch (col) {
             case 0:
                 return "Id";
             case 1:
-                return ;
-            
+                return "SPZ";
+            case 2:
+                return "Kapacita";
+            case 3:
+                return "Cena nakupu";
+            case 4:
+                return "Datum Nakupu";
             default:
                 assert false;
                 return null;
         }
      }
-     */
+     
     @Override
     public void refresh() throws BRentalException {
     Collection<Auto> rs = BrentalFacade.getDefault().getAuta();

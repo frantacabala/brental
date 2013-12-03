@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1385561178645
+Bnd-LastModified: 1386050351864
 Build-Jdk: 1.7.0_45
 Built-By: john
 Bundle-Activator: org.lib.brental.application.Activator
@@ -8,6 +8,6 @@ Bundle-Name: application OSGi Bundle
 Bundle-SymbolicName: org.lib.brental.application
 Bundle-Version: 1.0.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
-Import-Package: javax.swing,org.lib.brental.gui,org.osgi.framework;versi
- on="[1.6,2)"
+Import-Package: javax.swing,org.lib.brental.gui;version="[1.0,2)",org.os
+ gi.framework;version="[1.6,2)"
 Tool: Bnd-1.50.0

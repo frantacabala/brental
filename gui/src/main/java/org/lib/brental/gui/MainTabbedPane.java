@@ -53,4 +53,8 @@ public class MainTabbedPane extends JTabbedPane {
        return null;
        
    }
+   
+   public AutoPanel getAutoPanel(){
+       return autoPanel;
+   }
 }

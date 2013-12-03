@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import org.lib.brental.gui.impl.Refreshable;
 import org.lib.brental.model.Auto;
 import org.lib.brental.model.Faktura;
@@ -133,6 +134,10 @@ public class MainFrame extends JFrame {
    public Auto getSelectedAuto(){
        return null;
        
+   }
+   
+   public MainPanel getMainPanel(){
+       return mainPanel;
    }
 
     public void actionsNotif() {
