@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1388158506855
+Build-Jdk: 1.7.0_25
+Built-By: john
+Bundle-Activator: org.lib.brental.contr.ContrActivator
+Bundle-ManifestVersion: 2
+Bundle-Name: contr OSGi Bundle
+Bundle-SymbolicName: org.lib.brental.contr
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.lib.brental.contr;uses:="org.lib.brental.gui,org.lib
+ .brental.contr.actions,org.osgi.framework,org.lib.brental.utils,org.lib
+ .brental.gui.impl";version="1.0.0.SNAPSHOT",org.lib.brental.contr.actio
+ ns;uses:="javax.swing,org.lib.brental.utils,org.lib.brental.bussines,or
+ g.lib.brental.contr.dialogs,org.lib.brental.model,org.lib.brental.gui";
+ version="1.0.0.SNAPSHOT",org.lib.brental.contr.dialogs;uses:="javax.swi
+ ng,org.lib.brental.utils,org.lib.brental.gui,org.lib.brental.bussines,o
+ rg.lib.brental.model,org.lib.brental.gui.impl,javax.swing.plaf.basic,ja
+ vax.swing.border,javax.swing.event,javax.swing.text";version="1.0.0.SNA
+ PSHOT"
+Import-Package: javax.swing,javax.swing.border,javax.swing.event,javax.s
+ wing.plaf.basic,javax.swing.text,org.lib.brental.bussines;version="[1.0
+ ,2)",org.lib.brental.gui;version="[1.0,2)",org.lib.brental.gui.impl;ver
+ sion="[1.0,2)",org.lib.brental.model;version="[1.0,2)",org.lib.brental.
+ utils;version="[1.0,2)",org.osgi.framework;version="[1.6,2)"
+Tool: Bnd-1.50.0

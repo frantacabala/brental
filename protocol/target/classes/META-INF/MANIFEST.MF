@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1388158508035
+Build-Jdk: 1.7.0_25
+Built-By: john
+Bundle-Activator: org.lib.brental.protocol.ProtocolActivator
+Bundle-ManifestVersion: 2
+Bundle-Name: protocol OSGi Bundle
+Bundle-SymbolicName: org.lib.brental.protocol
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.lib.brental.protocol;uses:="org.lib.brental.model,ja
+ vax.xml.bind.annotation,org.lib.brental.bussines,org.lib.brental.utils,
+ javax.xml.bind,org.osgi.framework";version="1.0.0.SNAPSHOT"
+Import-Package: javax.xml.bind,javax.xml.bind.annotation,org.lib.brental
+ .bussines;version="[1.0,2)",org.lib.brental.model;version="[1.0,2)",org
+ .lib.brental.utils;version="[1.0,2)",org.osgi.framework;version="[1.6,2
+ )"
+Tool: Bnd-1.50.0

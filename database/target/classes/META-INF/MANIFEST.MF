@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1388158501108
+Build-Jdk: 1.7.0_25
+Built-By: john
+Bundle-Activator: org.lib.brental.database.DatabaseActivator
+Bundle-ManifestVersion: 2
+Bundle-Name: database OSGi Bundle
+Bundle-SymbolicName: org.lib.brental.database
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.lib.brental.database;uses:="org.lib.brental.database
+ .impl,org.lib.brental.integration,org.osgi.framework";version="1.0.0.SN
+ APSHOT",org.lib.brental.database.impl;uses:="org.lib.brental.model,java
+ x.swing,org.lib.brental.utils,org.lib.brental.integration,org.osgi.fram
+ ework.launch,org.osgi.framework,com.mysql.jdbc,org.lib.brental.database
+ ";version="1.0.0.SNAPSHOT"
+Import-Package: com.mysql.jdbc;version="[5.1,6)",javax.swing,org.lib.bre
+ ntal.integration;version="[1.0,2)",org.lib.brental.model;version="[1.0,
+ 2)",org.lib.brental.utils;version="[1.0,2)",org.osgi.framework;version=
+ "[1.6,2)",org.osgi.framework.launch;version="[1.0,2)"
+Tool: Bnd-1.50.0

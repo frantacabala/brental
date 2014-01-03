@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1388158509482
+Build-Jdk: 1.7.0_25
+Built-By: john
+Bundle-Activator: org.lib.brental.connection.ConnectionActivator
+Bundle-ManifestVersion: 2
+Bundle-Name: connection OSGi Bundle
+Bundle-SymbolicName: org.lib.brental.connection
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.lib.brental.connection;uses:="org.osgi.util.tracker,
+ org.osgi.framework,org.lib.brental.protocol,org.lib.brental.utils";vers
+ ion="1.0.0.SNAPSHOT"
+Import-Package: org.lib.brental.model;version="[1.0,2)",org.lib.brental.
+ protocol;version="[1.0,2)",org.lib.brental.utils;version="[1.0,2)",org.
+ osgi.framework;version="[1.6,2)",org.osgi.util.tracker;version="[1.5,2)
+ "
+Tool: Bnd-1.50.0
