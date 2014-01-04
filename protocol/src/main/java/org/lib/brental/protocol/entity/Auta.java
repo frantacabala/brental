@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.lib.brental.protocol;
+package org.lib.brental.protocol.entity;
 
 import java.io.Serializable;
 import java.util.ArrayList;

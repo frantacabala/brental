@@ -26,8 +26,10 @@ import org.lib.brental.model.Zakaznik;
 import org.lib.brental.model.ZakaznikId;
 import org.lib.brental.model.Zamestnanec;
 import org.lib.brental.model.ZamestnanecId;
-import org.lib.brental.protocol.Auta;
-import org.lib.brental.protocol.GetAuta;
+import org.lib.brental.protocol.entity.Auta;
+import org.lib.brental.protocol.entity.CreateAuto;
+import org.lib.brental.protocol.entity.GetAuta;
+import org.lib.brental.protocol.entity.SmazAuto;
 import org.lib.brental.utils.BRentalException;
 
 
@@ -43,13 +45,13 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
     
 
     @Override
-    public Auto vytvorAuto(String spz, int kapacita, int cena_zakoupeni, Date datum_zakoupeni, Date datum_tk) throws BRentalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void vytvorAuto(String spz, int kapacita, int cena_zakoupeni, Date datum_zakoupeni, Date datum_tk) throws BRentalException {
+        ConnectionService.getDefault().<Auta>send(new CreateAuto(spz, kapacita, cena_zakoupeni, datum_zakoupeni, datum_tk));
     }
 
     @Override
     public void smazAuto(AutoId id) throws BRentalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ConnectionService.getDefault().<Auta>send(new SmazAuto(id));
     }
 
     @Override
@@ -63,7 +65,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
     }
 
     @Override
-    public Faktura vytvorFakturu(ZamestnanecId id_zam, Date datum_vystaveni, Date datum_splatnosti) throws BRentalException {
+    public void vytvorFakturu(ZamestnanecId id_zam, Date datum_vystaveni, Date datum_splatnosti) throws BRentalException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -83,7 +85,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
     }
 
     @Override
-    public Lod vytvorLod(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, int delka, int max_ponor, String model, int nostnost, int sirka, String typ, String vyrobce) throws BRentalException {
+    public void vytvorLod(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, int delka, int max_ponor, String model, int nostnost, int sirka, String typ, String vyrobce) throws BRentalException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -128,7 +130,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
     }
 
     @Override
-    public Vesta vytvorVestu(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, String typ, String velikost, String vyrobce) throws BRentalException {
+    public void vytvorVestu(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, String typ, String velikost, String vyrobce) throws BRentalException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -148,7 +150,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
     }
 
     @Override
-    public Padlo vytvorPadlo(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, int delka, int sirka_listu, String typ) throws BRentalException {
+    public void vytvorPadlo(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, int delka, int sirka_listu, String typ) throws BRentalException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -168,7 +170,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
     }
 
     @Override
-    public Other vytvorOther(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, String poznamka) throws BRentalException {
+    public void vytvorOther(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, String poznamka) throws BRentalException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -188,7 +190,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
     }
 
     @Override
-    public Zakaznik vytvorZakaznika(String jmeno, String prijimeni, Adresa adresa, int cislo_op) throws BRentalException {
+    public void vytvorZakaznika(String jmeno, String prijimeni, Adresa adresa, int cislo_op) throws BRentalException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -208,7 +210,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
     }
 
     @Override
-    public Zamestnanec vytvorZamestnance(String jmeno, String prijimeni, String funkce, Adresa adresa, String login, String heslo) throws BRentalException {
+    public void vytvorZamestnance(String jmeno, String prijimeni, String funkce, Adresa adresa, String login, String heslo) throws BRentalException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

@@ -30,6 +30,8 @@ public final class ConnectionDialog extends AbstractBrentalDialog{
 
     public ConnectionDialog() {
         super("Connection...");
+        host.setText("localhost");
+        port.setText("3456");
         getContent().setLayout(new GridBagLayout());
         getContent().add(new JLabel("Host" + ": "),
                 new GBCBuilder().build());
@@ -70,6 +72,7 @@ public final class ConnectionDialog extends AbstractBrentalDialog{
       try {
             ConnectionService.getDefault().connect(InetAddress.getByName(host.getText()), Integer.parseInt(port.getText()));
             MainFrame.getInstance().refresh();
+            this.dispose();
         } catch (BRentalException ex) {
             MainFrame.getInstance().showError((BRentalException) ex);
         } catch (UnknownHostException ex) {

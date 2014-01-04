@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1388158506855
-Build-Jdk: 1.7.0_25
+Bnd-LastModified: 1388842559017
+Build-Jdk: 1.7.0_45
 Built-By: john
 Bundle-Activator: org.lib.brental.contr.ContrActivator
 Bundle-ManifestVersion: 2
@@ -15,7 +15,7 @@ Export-Package: org.lib.brental.contr;uses:="org.lib.brental.gui,org.lib
  g.lib.brental.contr.dialogs,org.lib.brental.model,org.lib.brental.gui";
  version="1.0.0.SNAPSHOT",org.lib.brental.contr.dialogs;uses:="javax.swi
  ng,org.lib.brental.utils,org.lib.brental.gui,org.lib.brental.bussines,o
- rg.lib.brental.model,org.lib.brental.gui.impl,javax.swing.plaf.basic,ja
+ rg.lib.brental.gui.impl,javax.swing.plaf.basic,org.lib.brental.model,ja
  vax.swing.border,javax.swing.event,javax.swing.text";version="1.0.0.SNA
  PSHOT"
 Import-Package: javax.swing,javax.swing.border,javax.swing.event,javax.s

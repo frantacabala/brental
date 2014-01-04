@@ -19,7 +19,7 @@ import org.lib.brental.model.*;
 public interface BrentalFacadeInterface {
 
     // operations for car 
-    public  Auto vytvorAuto(String spz,int kapacita,int cena_zakoupeni, Date datum_zakoupeni,Date datum_tk) throws BRentalException;
+    public  void vytvorAuto(String spz,int kapacita,int cena_zakoupeni, Date datum_zakoupeni,Date datum_tk) throws BRentalException;
     
     public  void smazAuto(AutoId id) throws BRentalException;
     
@@ -29,7 +29,7 @@ public interface BrentalFacadeInterface {
     
     
     //operations for facture
-    public  Faktura vytvorFakturu( ZamestnanecId id_zam, Date datum_vystaveni, Date datum_splatnosti) throws BRentalException;
+    public  void vytvorFakturu( ZamestnanecId id_zam, Date datum_vystaveni, Date datum_splatnosti) throws BRentalException;
     
     public  void smazFakturu(FakturaId id ) throws BRentalException;
     
@@ -40,7 +40,7 @@ public interface BrentalFacadeInterface {
     
     //operations for boat
     
-    public  Lod vytvorLod(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha,String evid,
+    public  void vytvorLod(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha,String evid,
             int delka, int max_ponor, String model, int nostnost, int sirka, String typ, String vyrobce) throws BRentalException;
     
     public  void smazLod(VybaveniId id) throws BRentalException;
@@ -62,7 +62,7 @@ public interface BrentalFacadeInterface {
     public  Collection<Rezervace> getRezervace() throws BRentalException;
     
     
-    public  Vesta vytvorVestu(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena,
+    public  void vytvorVestu(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena,
                                         int vaha,String evid, String typ, String velikost, String vyrobce) throws BRentalException;
     
     public  void smazVestu(VybaveniId id) throws BRentalException;
@@ -73,7 +73,7 @@ public interface BrentalFacadeInterface {
     
     
     
-    public  Padlo vytvorPadlo(String nazev, int nakup_cena, Date datum_nakup, String barva, 
+    public  void vytvorPadlo(String nazev, int nakup_cena, Date datum_nakup, String barva, 
                         int pujc_cena, int vaha,String evid, int delka, int sirka_listu,String typ) throws BRentalException;
     
     public  void smazPadlo(VybaveniId id) throws BRentalException;
@@ -84,7 +84,7 @@ public interface BrentalFacadeInterface {
     
     
     
-    public  Other vytvorOther(String nazev, int nakup_cena, Date datum_nakup, String barva, 
+    public  void vytvorOther(String nazev, int nakup_cena, Date datum_nakup, String barva, 
                                        int pujc_cena, int vaha,String evid, String poznamka) throws BRentalException;
     
     public  void smazOther(VybaveniId id) throws BRentalException;
@@ -95,7 +95,7 @@ public interface BrentalFacadeInterface {
     
     
     
-    public  Zakaznik vytvorZakaznika(String jmeno,String prijimeni, Adresa adresa, int cislo_op) throws BRentalException;
+    public  void vytvorZakaznika(String jmeno,String prijimeni, Adresa adresa, int cislo_op) throws BRentalException;
     
     public  void smazZakanika(ZakaznikId id) throws BRentalException;
     
@@ -105,7 +105,7 @@ public interface BrentalFacadeInterface {
     
     
     
-    public  Zamestnanec vytvorZamestnance(String jmeno,String prijimeni,String funkce,Adresa adresa,String login,String heslo) throws BRentalException;
+    public  void vytvorZamestnance(String jmeno,String prijimeni,String funkce,Adresa adresa,String login,String heslo) throws BRentalException;
     
     public  void smazZamestnance(ZamestnanecId id) throws BRentalException;
     

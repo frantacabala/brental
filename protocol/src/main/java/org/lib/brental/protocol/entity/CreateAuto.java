@@ -2,10 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.lib.brental.protocol;
+package org.lib.brental.protocol.entity;
 
 import java.util.Date;
 import org.lib.brental.bussines.BrentalFacadeInterface;
+import org.lib.brental.protocol.BrentalCommand;
 import org.lib.brental.utils.BRentalException;
 
 /**
@@ -74,8 +75,9 @@ public class CreateAuto extends BrentalCommand{
     
     
     @Override
-    public Object execute(BrentalFacadeInterface brentalFacede) throws BRentalException {
-        return brentalFacede.vytvorAuto(spz, kapacita, cena_zakoupeni, datum_zakoupeni, datum_tk);
+    public Object execute(BrentalFacadeInterface brentalFacade) throws BRentalException {
+        brentalFacade.vytvorAuto(spz, kapacita, cena_zakoupeni, datum_zakoupeni, datum_tk);
+        return OK;
     }
     
     

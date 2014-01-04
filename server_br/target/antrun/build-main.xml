@@ -2,21 +2,21 @@
 <project name="maven-antrun-" default="main"  >
 <target name="main">
   <property name="vm.args" value=""/>
-  <pathconvert pathsep=":" property="plugins.jars">
+  <pathconvert pathsep=";" property="plugins.jars">
     <path refid="maven.runtime.classpath"/>
-    <map to="" from="/home/john/NetBeansProjects/brental_tmp/server_br/target/classes"/>
+    <map to="" from="C:\Users\john\Documents\NetBeansProjects\brental\server_br\target\classes"/>
   </pathconvert>
   <makeurl property="urls" separator=" ">
     <path path="${plugins.jars}"/>
-    <path location="/home/john/NetBeansProjects/brental_tmp/server_br/target/server_br-1.0-SNAPSHOT.jar"/>
+    <path location="C:\Users\john\Documents\NetBeansProjects\brental\server_br\target/server_br-1.0-SNAPSHOT.jar"/>
   </makeurl>
-  <propertyfile file="/home/john/NetBeansProjects/brental_tmp/server_br/target/run.properties">
+  <propertyfile file="C:\Users\john\Documents\NetBeansProjects\brental\server_br\target/run.properties">
     <entry value="${urls}" key="felix.auto.start"/>
     <entry value="uninstall,install,update,start" key="felix.auto.deploy.action"/>
-    <entry value="/home/john/NetBeansProjects/brental_tmp/server_br/target/felix-cache" key="org.osgi.framework.storage"/>
+    <entry value="C:\Users\john\Documents\NetBeansProjects\brental\server_br\target\felix-cache" key="org.osgi.framework.storage"/>
     <entry value="*" key="org.osgi.framework.bootdelegation"/>
   </propertyfile>
-  <makeurl file="/home/john/NetBeansProjects/brental_tmp/server_br/target/run.properties" property="run.properties.url"/>
+  <makeurl file="C:\Users\john\Documents\NetBeansProjects\brental\server_br\target/run.properties" property="run.properties.url"/>
   <java fork="true" jar="${maven.dependency.org.apache.felix.org.apache.felix.main.jar.path}">
     <sysproperty value="${run.properties.url}" key="felix.config.properties"/>
     <jvmarg line="${vm.args}"/>

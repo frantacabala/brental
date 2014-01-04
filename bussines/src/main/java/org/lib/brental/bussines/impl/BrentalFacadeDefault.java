@@ -37,8 +37,8 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
     
 
     @Override
-    public Auto vytvorAuto(String spz, int kapacita, int cena_zakoupeni, Date datum_zakoupeni, Date datum_tk) throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getAutoDAO().create(spz, kapacita, cena_zakoupeni, datum_zakoupeni, datum_tk);
+    public void vytvorAuto(String spz, int kapacita, int cena_zakoupeni, Date datum_zakoupeni, Date datum_tk) throws BRentalException {
+         AbstractDAOFactoryService.getDefault().getAutoDAO().create(spz, kapacita, cena_zakoupeni, datum_zakoupeni, datum_tk);
     }
 
     @Override
@@ -59,8 +59,8 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
     }
 
     @Override
-    public Faktura vytvorFakturu(ZamestnanecId id_zam, Date datum_vystaveni, Date datum_splatnosti) throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getFakturaDAO().create(id_zam, datum_vystaveni, datum_splatnosti);
+    public void vytvorFakturu(ZamestnanecId id_zam, Date datum_vystaveni, Date datum_splatnosti) throws BRentalException {
+         AbstractDAOFactoryService.getDefault().getFakturaDAO().create(id_zam, datum_vystaveni, datum_splatnosti);
     }
 
     @Override
@@ -79,9 +79,9 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
     }
 
     @Override
-    public Lod vytvorLod(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid,
+    public void vytvorLod(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid,
             int delka, int max_ponor, String model, int nostnost, int sirka, String typ, String vyrobce) throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getLodDAO().create(nazev, nakup_cena, datum_nakup, barva, pujc_cena, vaha, evid,
+         AbstractDAOFactoryService.getDefault().getLodDAO().create(nazev, nakup_cena, datum_nakup, barva, pujc_cena, vaha, evid,
                 delka, max_ponor, model, nostnost, sirka, typ, vyrobce);
     }
 
@@ -101,8 +101,8 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
     }
 
     @Override
-    public Zakaznik vytvorZakaznika(String jmeno, String prijimeni, Adresa adresa, int cislo_op) throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getZakaznikDAO().create(jmeno, prijimeni, adresa, cislo_op);
+    public void vytvorZakaznika(String jmeno, String prijimeni, Adresa adresa, int cislo_op) throws BRentalException {
+         AbstractDAOFactoryService.getDefault().getZakaznikDAO().create(jmeno, prijimeni, adresa, cislo_op);
     }
 
     @Override
@@ -121,8 +121,8 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
     }
 
     @Override
-    public Zamestnanec vytvorZamestnance(String jmeno, String prijimeni, String funkce, Adresa adresa, String login, String heslo) throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getZamestnanecDAO().create(jmeno, prijimeni, funkce, adresa, login, heslo);
+    public void vytvorZamestnance(String jmeno, String prijimeni, String funkce, Adresa adresa, String login, String heslo) throws BRentalException {
+         AbstractDAOFactoryService.getDefault().getZamestnanecDAO().create(jmeno, prijimeni, funkce, adresa, login, heslo);
     }
 
     @Override
@@ -141,8 +141,8 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
     }
 
     @Override
-    public Vesta vytvorVestu(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, String typ, String velikost, String vyrobce) throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getVestaDAO().create(nazev, nakup_cena, datum_nakup, barva, pujc_cena, vaha, evid, typ, velikost, vyrobce);
+    public void vytvorVestu(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, String typ, String velikost, String vyrobce) throws BRentalException {
+         AbstractDAOFactoryService.getDefault().getVestaDAO().create(nazev, nakup_cena, datum_nakup, barva, pujc_cena, vaha, evid, typ, velikost, vyrobce);
     }
 
     @Override
@@ -181,8 +181,8 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
      }
      */
     @Override
-    public Padlo vytvorPadlo(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, int delka, int sirka_listu, String typ) throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getPadloDAO().create(nazev, nakup_cena, datum_nakup, barva, pujc_cena, vaha, evid, delka, sirka_listu, typ);
+    public void vytvorPadlo(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, int delka, int sirka_listu, String typ) throws BRentalException {
+         AbstractDAOFactoryService.getDefault().getPadloDAO().create(nazev, nakup_cena, datum_nakup, barva, pujc_cena, vaha, evid, delka, sirka_listu, typ);
     }
 
     @Override
@@ -201,8 +201,8 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
     }
 
     @Override
-    public Other vytvorOther(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, String poznamka) throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getOtherDAO().create(nazev, nakup_cena, datum_nakup, barva, pujc_cena, vaha, evid, poznamka);
+    public void vytvorOther(String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha, String evid, String poznamka) throws BRentalException {
+         AbstractDAOFactoryService.getDefault().getOtherDAO().create(nazev, nakup_cena, datum_nakup, barva, pujc_cena, vaha, evid, poznamka);
     }
 
     @Override

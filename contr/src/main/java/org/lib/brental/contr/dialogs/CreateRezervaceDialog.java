@@ -306,7 +306,7 @@ public final class CreateRezervaceDialog extends AbstractBrentalDialog {
             Zamestnanec za = (Zamestnanec) zam.getSelectedItem();
             Faktura f = (Faktura) fak.getSelectedItem();
             if(f==null){
-               f=BrentalFacadeService.getDefault().vytvorFakturu(za.getId(), date, date_tk);
+               BrentalFacadeService.getDefault().vytvorFakturu(za.getId(), date, date_tk);
                
             }
             

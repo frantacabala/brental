@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1388158510293
-Build-Jdk: 1.7.0_25
+Bnd-LastModified: 1388842616514
+Build-Jdk: 1.7.0_45
 Built-By: john
 Bundle-Activator: org.lib.brental.proxy.ProxyActivator
 Bundle-ManifestVersion: 2
@@ -12,6 +12,7 @@ Import-Package: javax.swing,org.lib.brental.bussines;version="[1.0,2)",o
  rg.lib.brental.connection;version="[1.0,2)",org.lib.brental.contr.actio
  ns;version="[1.0,2)",org.lib.brental.contr.dialogs;version="[1.0,2)",or
  g.lib.brental.gui;version="[1.0,2)",org.lib.brental.model;version="[1.0
- ,2)",org.lib.brental.protocol;version="[1.0,2)",org.lib.brental.utils;v
- ersion="[1.0,2)",org.osgi.framework;version="[1.6,2)"
+ ,2)",org.lib.brental.protocol;version="[1.0,2)",org.lib.brental.protoco
+ l.entity,org.lib.brental.utils;version="[1.0,2)",org.osgi.framework;ver
+ sion="[1.6,2)"
 Tool: Bnd-1.50.0
