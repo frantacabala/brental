@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1388842616514
+Bnd-LastModified: 1388842718882
 Build-Jdk: 1.7.0_45
 Built-By: john
 Bundle-Activator: org.lib.brental.proxy.ProxyActivator

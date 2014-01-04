@@ -35,11 +35,6 @@
             <artifactId>contr</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>proxy</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
 
     <build>

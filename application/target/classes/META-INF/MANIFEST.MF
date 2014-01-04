@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1388842560906
+Bnd-LastModified: 1388842797677
 Build-Jdk: 1.7.0_45
 Built-By: john
 Bundle-Activator: org.lib.brental.application.AppActivator
@@ -12,9 +12,7 @@ Class-Path: dependency-lib/org.osgi.core-4.3.0.jar dependency-lib/org.ap
  ndency-lib/utils-1.0-SNAPSHOT.jar dependency-lib/model-1.0-SNAPSHOT.jar
   dependency-lib/bussines-1.0-SNAPSHOT.jar dependency-lib/integration-1.
  0-SNAPSHOT.jar dependency-lib/database-1.0-SNAPSHOT.jar dependency-lib/
- contr-1.0-SNAPSHOT.jar dependency-lib/mysql-connector-java-5.1.27.jar d
- ependency-lib/proxy-1.0-SNAPSHOT.jar dependency-lib/connection-1.0-SNAP
- SHOT.jar dependency-lib/protocol-1.0-SNAPSHOT.jar
+ contr-1.0-SNAPSHOT.jar dependency-lib/mysql-connector-java-5.1.27.jar
 Created-By: Apache Maven Bundle Plugin
 Import-Package: javax.swing,org.lib.brental.bussines;version="[1.0,2)",o
  rg.lib.brental.gui;version="[1.0,2)",org.osgi.framework;version="[1.6,2
