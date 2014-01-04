@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.lib.brental.protocol.entity;
+package org.lib.brental.protocol;
 
 import java.util.Date;
 import org.lib.brental.bussines.BrentalFacadeInterface;

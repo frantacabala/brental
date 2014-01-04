@@ -4,9 +4,6 @@
  */
 package org.lib.brental.protocol;
 
-import org.lib.brental.protocol.entity.GetAuta;
-import org.lib.brental.protocol.entity.CreateAuto;
-import org.lib.brental.protocol.entity.Auta;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;

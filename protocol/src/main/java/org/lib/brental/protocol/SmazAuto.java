@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package org.lib.brental.protocol.entity;
+package org.lib.brental.protocol;
 
 import org.lib.brental.bussines.BrentalFacadeInterface;
 import org.lib.brental.model.AutoId;

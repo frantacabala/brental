@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1388842713177
-Build-Jdk: 1.7.0_45
+Bnd-LastModified: 1388849113238
+Build-Jdk: 1.7.0_25
 Built-By: john
 Bundle-Activator: org.lib.brental.model.ModelActivator
 Bundle-ManifestVersion: 2

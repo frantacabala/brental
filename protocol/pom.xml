@@ -49,7 +49,7 @@
                 <configuration>
                     <instructions>
                         <Bundle-Activator>org.lib.brental.protocol.ProtocolActivator</Bundle-Activator>
-                        <Export-Package >org.lib.brental.protocol</Export-Package>
+                        <Export-Package >org.lib.brental.protocol,org.lib.brental.protocol.entity</Export-Package>
                         <Private-Package>org.lib.brental.protocol.*</Private-Package>
                     </instructions>
                 </configuration>

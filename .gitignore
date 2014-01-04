@@ -217,3 +217,8 @@ pip-log.txt
 /controller/target/
 /bussines/target/
 /gui/target/
+/proxy/target/
+/contr/target/
+/connection/target/
+/server_br/target/
+/application/target/

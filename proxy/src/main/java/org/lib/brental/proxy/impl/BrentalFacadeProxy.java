@@ -26,10 +26,10 @@ import org.lib.brental.model.Zakaznik;
 import org.lib.brental.model.ZakaznikId;
 import org.lib.brental.model.Zamestnanec;
 import org.lib.brental.model.ZamestnanecId;
-import org.lib.brental.protocol.entity.Auta;
-import org.lib.brental.protocol.entity.CreateAuto;
-import org.lib.brental.protocol.entity.GetAuta;
-import org.lib.brental.protocol.entity.SmazAuto;
+import org.lib.brental.protocol.Auta;
+import org.lib.brental.protocol.CreateAuto;
+import org.lib.brental.protocol.GetAuta;
+import org.lib.brental.protocol.SmazAuto;
 import org.lib.brental.utils.BRentalException;
 
 

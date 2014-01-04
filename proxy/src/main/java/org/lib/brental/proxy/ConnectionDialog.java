@@ -30,8 +30,7 @@ public final class ConnectionDialog extends AbstractBrentalDialog{
 
     public ConnectionDialog() {
         super("Connection...");
-        host.setText("localhost");
-        port.setText("3456");
+        
         getContent().setLayout(new GridBagLayout());
         getContent().add(new JLabel("Host" + ": "),
                 new GBCBuilder().build());
@@ -41,6 +40,8 @@ public final class ConnectionDialog extends AbstractBrentalDialog{
                 new GBCBuilder().setY(1).build());
         getContent().add(port = new ValidatedTF(this, Integer.toString(BrentalCommand.port)),
                 new GBCBuilder().setY(1).setX(GridBagConstraints.RELATIVE).build());
+        host.setText("localhost");
+        port.setText("3456");
         validateDialog();
         pack();
         setVisible(true);

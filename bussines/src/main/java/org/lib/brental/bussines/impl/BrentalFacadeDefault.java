@@ -38,17 +38,17 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
 
     @Override
     public void vytvorAuto(String spz, int kapacita, int cena_zakoupeni, Date datum_zakoupeni, Date datum_tk) throws BRentalException {
-         AbstractDAOFactoryService.getDefault().getAutoDAO().create(spz, kapacita, cena_zakoupeni, datum_zakoupeni, datum_tk);
+         AbstractDataDAOFactoryService.getDefault().getAutoDAO().create(spz, kapacita, cena_zakoupeni, datum_zakoupeni, datum_tk);
     }
 
     @Override
     public void smazAuto(AutoId id) throws BRentalException {
-        AbstractDAOFactoryService.getDefault().getAutoDAO().delete(id);
+        AbstractDataDAOFactoryService.getDefault().getAutoDAO().delete(id);
     }
 
     @Override
     public void aktualizujAuto(Auto auto) throws BRentalException {
-        AbstractDAOFactoryService.getDefault().getAutoDAO().update(auto);
+        AbstractDataDAOFactoryService.getDefault().getAutoDAO().update(auto);
     }
 
     @Override
@@ -60,17 +60,17 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
 
     @Override
     public void vytvorFakturu(ZamestnanecId id_zam, Date datum_vystaveni, Date datum_splatnosti) throws BRentalException {
-         AbstractDAOFactoryService.getDefault().getFakturaDAO().create(id_zam, datum_vystaveni, datum_splatnosti);
+         AbstractDataDAOFactoryService.getDefault().getFakturaDAO().create(id_zam, datum_vystaveni, datum_splatnosti);
     }
 
     @Override
     public void smazFakturu(FakturaId id) throws BRentalException {
-        AbstractDAOFactoryService.getDefault().getFakturaDAO().delete(id);
+        AbstractDataDAOFactoryService.getDefault().getFakturaDAO().delete(id);
     }
 
     @Override
     public void aktualizujFakturu(Faktura fak) throws BRentalException {
-        AbstractDAOFactoryService.getDefault().getFakturaDAO().update(fak);
+        AbstractDataDAOFactoryService.getDefault().getFakturaDAO().update(fak);
     }
 
     @Override
