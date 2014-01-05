@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 5, 2014 1:07:37 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="brental.util.TypVybaveni" table="typ_vybaveni" catalog="brental">
+        <id name="typVybaveniId" type="java.lang.Integer">
+            <column name="typ_vybaveniID" />
+            <generator class="identity" />
+        </id>
+        <property name="barva" type="string">
+            <column name="barva" length="15" not-null="true" />
+        </property>
+        <property name="cenaZaPujceniDen" type="double">
+            <column name="cena_za_pujceni_den" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="nazev" type="string">
+            <column name="nazev" length="50" not-null="true" />
+        </property>
+        <property name="vaha" type="double">
+            <column name="vaha" precision="22" scale="0" not-null="true" />
+        </property>
+        <one-to-one name="padlo" class="brental.util.Padlo"></one-to-one>
+        <one-to-one name="vesta" class="brental.util.Vesta"></one-to-one>
+        <set name="vybavenis" table="vybaveni" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="typ_vybaveniID" />
+            </key>
+            <one-to-many class="brental.util.Vybaveni" />
+        </set>
+        <one-to-one name="lod" class="brental.util.Lod"></one-to-one>
+    </class>
+</hibernate-mapping>

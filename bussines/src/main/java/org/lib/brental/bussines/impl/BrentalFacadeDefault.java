@@ -97,7 +97,7 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
 
     @Override
     public Collection<Vybaveni> getLode() throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getLodDAO().getAll();
+        return AbstractDataDAOFactoryService.getDefault().getLodDAO().getAll();
     }
 
     @Override
@@ -117,7 +117,7 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
 
     @Override
     public Collection<Zakaznik> getZakazniky() throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getZakaznikDAO().getAll();
+        return AbstractDataDAOFactoryService.getDefault().getZakaznikDAO().getAll();
     }
 
     @Override
@@ -137,7 +137,7 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
 
     @Override
     public Collection<Zamestnanec> getZamestnance() throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getZamestnanecDAO().getAll();
+        return AbstractDataDAOFactoryService.getDefault().getZamestnanecDAO().getAll();
     }
 
     @Override
@@ -157,7 +157,7 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
 
     @Override
     public Collection<Vybaveni> getVesty() throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getVestaDAO().getAll();
+        return AbstractDataDAOFactoryService.getDefault().getVestaDAO().getAll();
     }
 
     /*  @Override
@@ -197,7 +197,7 @@ public class BrentalFacadeDefault extends BrentalFacadeService {
 
     @Override
     public Collection<Vybaveni> getPadla() throws BRentalException {
-        return AbstractDAOFactoryService.getDefault().getPadloDAO().getAll();
+        return AbstractDataDAOFactoryService.getDefault().getPadloDAO().getAll();
     }
 
     @Override

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/brental?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">fakum392a</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.ast.ASTQueryTranslatorFactory</property>
+    <mapping resource="brental/util/Lod.hbm.xml"/>
+    <mapping resource="brental/util/Vybaveni.hbm.xml"/>
+    <mapping resource="brental/util/Vesta.hbm.xml"/>
+    <mapping resource="brental/util/Zakaznik.hbm.xml"/>
+    <mapping resource="brental/util/Rezervace.hbm.xml"/>
+    <mapping resource="brental/util/Auto.hbm.xml"/>
+    <mapping resource="brental/util/Padlo.hbm.xml"/>
+    <mapping resource="brental/util/TypVybaveni.hbm.xml"/>
+    <mapping resource="brental/util/KontrolniBod.hbm.xml"/>
+    <mapping resource="brental/util/Zamestnanec.hbm.xml"/>
+    <mapping resource="brental/util/Faktura.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

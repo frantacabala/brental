@@ -4,13 +4,14 @@
  */
 package org.lib.brental.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author john
  */
-public class Lod extends Vybaveni<Lod> {
+public class Lod extends Vybaveni<Lod> implements Serializable{
 
     private int delka;
     private int max_ponor;

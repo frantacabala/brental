@@ -4,13 +4,14 @@
  */
 package org.lib.brental.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author john
  */
-public class Other extends Vybaveni<Other> {
+public class Other extends Vybaveni<Other> implements Serializable{
     private String poznamka;
     
     public Other(VybaveniId id, String nazev, int nakup_cena, Date datum_nakup, String barva, int pujc_cena, int vaha,String evid, String poznamka) {

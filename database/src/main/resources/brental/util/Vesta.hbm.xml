@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 5, 2014 1:07:37 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="brental.util.Vesta" table="vesta" catalog="brental">
+        <id name="vestaId" type="int">
+            <column name="vestaID" />
+            <generator class="foreign">
+                <param name="property">typVybaveni</param>
+            </generator>
+        </id>
+        <one-to-one name="typVybaveni" class="brental.util.TypVybaveni" constrained="true"></one-to-one>
+        <property name="typ" type="string">
+            <column name="typ" length="50" not-null="true" />
+        </property>
+        <property name="velikost" type="double">
+            <column name="velikost" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="vyrobce" type="string">
+            <column name="vyrobce" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

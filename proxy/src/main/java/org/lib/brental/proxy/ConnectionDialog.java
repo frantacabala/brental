@@ -15,6 +15,7 @@ import org.lib.brental.connection.ConnectionService;
 import org.lib.brental.contr.dialogs.AbstractBrentalDialog;
 import org.lib.brental.contr.dialogs.ValidatedTF;
 import org.lib.brental.gui.MainFrame;
+import org.lib.brental.protocol.Auta;
 import org.lib.brental.protocol.BrentalCommand;
 import org.lib.brental.utils.BRentalException;
 import org.lib.brental.utils.GBCBuilder;

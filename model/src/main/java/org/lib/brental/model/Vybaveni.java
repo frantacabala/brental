@@ -4,6 +4,7 @@
  */
 package org.lib.brental.model;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,7 +15,7 @@ import java.util.logging.Logger;
  *
  * @author john
  */
-public abstract class Vybaveni<T extends Vybaveni<T>> {
+public abstract class Vybaveni<T extends Vybaveni<T>> implements Serializable {
     private VybaveniId id;
     private String nazev;
     private int nakup_cena;

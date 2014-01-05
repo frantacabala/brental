@@ -4,11 +4,13 @@
  */
 package org.lib.brental.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author john
  */
-public class Adresa {
+public class Adresa implements Serializable {
     private String ulice;
     private String mesto;
     private int psc;

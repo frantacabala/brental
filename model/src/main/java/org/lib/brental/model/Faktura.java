@@ -4,6 +4,7 @@
  */
 package org.lib.brental.model;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
@@ -15,7 +16,7 @@ import java.util.logging.Logger;
  *
  * @author john
  */
-public class Faktura {
+public class Faktura implements Serializable{
     private FakturaId id;
     private ZamestnanecId id_zam;
     private Date datum_vystaveni;

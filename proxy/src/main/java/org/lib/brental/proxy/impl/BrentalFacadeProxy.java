@@ -28,21 +28,35 @@ import org.lib.brental.model.Zamestnanec;
 import org.lib.brental.model.ZamestnanecId;
 import org.lib.brental.protocol.Auta;
 import org.lib.brental.protocol.CreateAuto;
+import org.lib.brental.protocol.Faktury;
 import org.lib.brental.protocol.GetAuta;
+import org.lib.brental.protocol.GetFaktury;
+import org.lib.brental.protocol.GetLode;
+import org.lib.brental.protocol.GetOthers;
+import org.lib.brental.protocol.GetPadla;
+import org.lib.brental.protocol.GetRezervaces;
+import org.lib.brental.protocol.GetVesty;
+import org.lib.brental.protocol.GetZakaznici;
+import org.lib.brental.protocol.GetZamestnanci;
+import org.lib.brental.protocol.Lode;
+import org.lib.brental.protocol.Others;
+import org.lib.brental.protocol.Padla;
+import org.lib.brental.protocol.Rezervaces;
 import org.lib.brental.protocol.SmazAuto;
+import org.lib.brental.protocol.Vesty;
+import org.lib.brental.protocol.Zakaznici;
+import org.lib.brental.protocol.Zamestnanci;
 import org.lib.brental.utils.BRentalException;
-
 
 /**
  *
  * @author john
  */
-public class BrentalFacadeProxy extends BrentalFacadeService{
+public class BrentalFacadeProxy extends BrentalFacadeService {
 
     public BrentalFacadeProxy() {
-        
+
     }
-    
 
     @Override
     public void vytvorAuto(String spz, int kapacita, int cena_zakoupeni, Date datum_zakoupeni, Date datum_tk) throws BRentalException {
@@ -61,7 +75,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
 
     @Override
     public Collection<Auto> getAuta() throws BRentalException {
-       return ConnectionService.getDefault().<Auta>send(new GetAuta()).getAuta();
+        return ConnectionService.getDefault().<Auta>send(new GetAuta()).getAuta();
     }
 
     @Override
@@ -81,7 +95,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
 
     @Override
     public Collection<Faktura> getFaktury() throws BRentalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return ConnectionService.getDefault().<Faktury>send(new GetFaktury()).getItem();
     }
 
     @Override
@@ -101,7 +115,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
 
     @Override
     public Collection<Vybaveni> getLode() throws BRentalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return ConnectionService.getDefault().<Lode>send(new GetLode()).getItem();
     }
 
     @Override
@@ -126,7 +140,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
 
     @Override
     public Collection<Rezervace> getRezervace() throws BRentalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return ConnectionService.getDefault().<Rezervaces>send(new GetRezervaces()).getItem();
     }
 
     @Override
@@ -146,7 +160,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
 
     @Override
     public Collection<Vybaveni> getVesty() throws BRentalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return ConnectionService.getDefault().<Vesty>send(new GetVesty()).getItem();
     }
 
     @Override
@@ -166,7 +180,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
 
     @Override
     public Collection<Vybaveni> getPadla() throws BRentalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return ConnectionService.getDefault().<Padla>send(new GetPadla()).getItem();
     }
 
     @Override
@@ -186,7 +200,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
 
     @Override
     public Collection<Vybaveni> getOther() throws BRentalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return ConnectionService.getDefault().<Others>send(new GetOthers()).getItem();
     }
 
     @Override
@@ -206,7 +220,7 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
 
     @Override
     public Collection<Zakaznik> getZakazniky() throws BRentalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return ConnectionService.getDefault().<Zakaznici>send(new GetZakaznici()).getItem();
     }
 
     @Override
@@ -226,12 +240,12 @@ public class BrentalFacadeProxy extends BrentalFacadeService{
 
     @Override
     public Collection<Zamestnanec> getZamestnance() throws BRentalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return ConnectionService.getDefault().<Zamestnanci>send(new GetZamestnanci()).getItem();
     }
 
     @Override
     public boolean isAvailable() {
         return ConnectionService.getDefault().isConnected();
     }
-    
+
 }

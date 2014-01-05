@@ -4,11 +4,13 @@
  */
 package org.lib.brental.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author john
  */
-public class Zakaznik {
+public class Zakaznik implements Serializable {
     private ZakaznikId id;
     private String jmeno;
     private String prijimeni;

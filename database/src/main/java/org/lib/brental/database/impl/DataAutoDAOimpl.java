@@ -4,6 +4,7 @@
  */
 package org.lib.brental.database.impl;
 
+//import brental.util.HibernateUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,6 +20,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+//import org.hibernate.Query;
+//import org.hibernate.Session;
 import org.lib.brental.integration.AutoDAO;
 import org.lib.brental.model.Auto;
 import org.lib.brental.model.AutoId;
@@ -137,4 +140,18 @@ class DataAutoDAOimpl implements AutoDAO {
 
 
     }
+    
+//    public Collection<Auto> getAll() throws BRentalException {
+//        String hql=null;
+//        ArrayList<Auto> auta = new ArrayList<Auto>();
+//        hql="from Auto";
+//        Session session = HibernateUtil.getSessionFactory().openSession();
+//        session.beginTransaction();
+//        Query q = session.createQuery(hql);
+//        auta=(ArrayList)q.list();
+//        return auta;
+//
+//    }
+    
+    
 }

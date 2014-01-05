@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="brental"/>
+  <table-filter match-name="faktura"/>
+  <table-filter match-name="rezervace"/>
+  <table-filter match-name="auto"/>
+  <table-filter match-name="zamestnanec"/>
+  <table-filter match-name="vesta"/>
+  <table-filter match-name="padlo"/>
+  <table-filter match-name="zakaznik"/>
+  <table-filter match-name="typ_vybaveni"/>
+  <table-filter match-name="lod"/>
+  <table-filter match-name="vybaveni"/>
+  <table-filter match-name="kontrolni_bod"/>
+</hibernate-reverse-engineering>

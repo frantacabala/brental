@@ -4,13 +4,14 @@
  */
 package org.lib.brental.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author john
  */
-public class Vesta extends Vybaveni<Vesta>{
+public class Vesta extends Vybaveni<Vesta> implements Serializable{
     private String typ;
     private String velikost;
     private String vyrobce;

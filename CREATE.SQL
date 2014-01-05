@@ -159,7 +159,6 @@ CREATE TABLE Vybaveni
 
 CREATE TABLE Zakaznik
 (
-        adresa VARCHAR(150),
         cislo_op long,
         jmeno VARCHAR(50) NOT NULL,
         prijmeni VARCHAR(50) NOT NULL,

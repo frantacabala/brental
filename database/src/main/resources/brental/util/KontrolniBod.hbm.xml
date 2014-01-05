@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 5, 2014 1:07:37 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="brental.util.KontrolniBod" table="kontrolni_bod" catalog="brental">
+        <id name="kontrolniBodId" type="java.lang.Integer">
+            <column name="kontrolni_bodID" />
+            <generator class="identity" />
+        </id>
+        <property name="kmReky" type="double">
+            <column name="km_reky" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="nazev" type="string">
+            <column name="nazev" length="50" />
+        </property>
+        <property name="reka" type="string">
+            <column name="reka" length="50" />
+        </property>
+        <set name="rezervaces" table="rezervace" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="kontrolni_bodID" />
+            </key>
+            <one-to-many class="brental.util.Rezervace" />
+        </set>
+        <set name="rezervaces_1" table="rezervace" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="kontrolni_bodID" />
+            </key>
+            <one-to-many class="brental.util.Rezervace" />
+        </set>
+    </class>
+</hibernate-mapping>

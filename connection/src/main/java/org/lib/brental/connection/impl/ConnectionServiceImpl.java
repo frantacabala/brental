@@ -11,6 +11,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import org.lib.brental.connection.ConnectionService;
 import org.lib.brental.model.Auto;
 import org.lib.brental.protocol.BrentalCommand;
@@ -71,6 +72,7 @@ public class ConnectionServiceImpl extends ConnectionService {
                     throw (BRentalException) response;
                 }
             }
+            JOptionPane.showMessageDialog(null, response);
             return response;
         } catch (IOException ex) {
             Logger.getLogger(ConnectionServiceImpl.class.getName()).log(Level.INFO, null, ex);

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 5, 2014 1:07:37 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="brental.util.Faktura" table="faktura" catalog="brental">
+        <id name="fakturaId" type="java.lang.Integer">
+            <column name="fakturaID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="zamestnanec" class="brental.util.Zamestnanec" fetch="select">
+            <column name="zamestnanecID" />
+        </many-to-one>
+        <property name="cislo" type="int">
+            <column name="cislo" not-null="true" />
+        </property>
+        <property name="soubor" type="string">
+            <column name="soubor" />
+        </property>
+        <property name="splatnost" type="date">
+            <column name="splatnost" length="10" not-null="true" />
+        </property>
+        <property name="vystaveni" type="date">
+            <column name="vystaveni" length="10" not-null="true" />
+        </property>
+        <set name="rezervaces" table="rezervace" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fakturaID" />
+            </key>
+            <one-to-many class="brental.util.Rezervace" />
+        </set>
+    </class>
+</hibernate-mapping>

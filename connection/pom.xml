@@ -41,6 +41,13 @@
             <groupId>org.lib.brental</groupId>
             <artifactId>protocol</artifactId>
             <version>1.0-SNAPSHOT</version>
+            
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.lib.brental</groupId>
+            <artifactId>model</artifactId>
+            <version>1.0-SNAPSHOT</version>
             <type>jar</type>
         </dependency>
     </dependencies>

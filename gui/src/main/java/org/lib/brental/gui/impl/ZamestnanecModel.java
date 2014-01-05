@@ -12,6 +12,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.AbstractTableModel;
 import org.lib.brental.bussines.BrentalFacadeService;
 import org.lib.brental.gui.MainFrame;
@@ -110,6 +111,7 @@ public class ZamestnanecModel extends AbstractTableModel implements Refreshable 
     public void refresh() throws BRentalException {
         Collection<Zamestnanec> rs = BrentalFacadeService.getDefault().getZamestnance();
         zamestnanci = new ArrayList<>(rs);
+        JOptionPane.showMessageDialog(null,"MODEL ZAME - " + zamestnanci.get(0).getJmeno());
         Collections.sort(zamestnanci, new Comparator<Zamestnanec>() {
             @Override
             public int compare(Zamestnanec o1, Zamestnanec o2) {

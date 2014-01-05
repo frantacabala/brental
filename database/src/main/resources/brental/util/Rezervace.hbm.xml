@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 5, 2014 1:07:37 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="brental.util.Rezervace" table="rezervace" catalog="brental">
+        <id name="rezervaceId" type="java.lang.Integer">
+            <column name="rezervaceID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="zakaznik" class="brental.util.Zakaznik" fetch="select">
+            <column name="zakaznikID" />
+        </many-to-one>
+        <many-to-one name="faktura" class="brental.util.Faktura" fetch="select">
+            <column name="fakturaID" />
+        </many-to-one>
+        <many-to-one name="zamestnanec" class="brental.util.Zamestnanec" fetch="select">
+            <column name="zamestnanecID" />
+        </many-to-one>
+        <many-to-one name="kontrolniBod" class="brental.util.KontrolniBod" fetch="select">
+            <column name="kontrolni_bodID" />
+        </many-to-one>
+        <property name="doData" type="date">
+            <column name="do_data" length="10" not-null="true" />
+        </property>
+        <property name="odData" type="date">
+            <column name="od_data" length="10" not-null="true" />
+        </property>
+        <property name="potvrzena" type="boolean">
+            <column name="potvrzena" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

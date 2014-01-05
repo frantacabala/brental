@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 5, 2014 1:07:37 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="brental.util.Zakaznik" table="zakaznik" catalog="brental">
+        <id name="zakaznikId" type="java.lang.Integer">
+            <column name="zakaznikID" />
+            <generator class="identity" />
+        </id>
+        <property name="adresa" type="string">
+            <column name="adresa" length="150" />
+        </property>
+        <property name="cisloOp" type="string">
+            <column name="cislo_op" length="16777215" />
+        </property>
+        <property name="jmeno" type="string">
+            <column name="jmeno" length="50" not-null="true" />
+        </property>
+        <property name="prijmeni" type="string">
+            <column name="prijmeni" length="50" not-null="true" />
+        </property>
+        <property name="ulice" type="string">
+            <column name="ulice" length="100" not-null="true" />
+        </property>
+        <property name="mesto" type="string">
+            <column name="mesto" length="100" not-null="true" />
+        </property>
+        <property name="psc" type="int">
+            <column name="psc" not-null="true" />
+        </property>
+        <set name="rezervaces" table="rezervace" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="zakaznikID" />
+            </key>
+            <one-to-many class="brental.util.Rezervace" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -35,6 +35,7 @@
             <groupId>org.lib.brental</groupId>
             <artifactId>bussines</artifactId>
             <version>1.0-SNAPSHOT</version>
+            
             <type>jar</type>
         </dependency>
         <dependency>

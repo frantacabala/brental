@@ -4,13 +4,14 @@
  */
 package org.lib.brental.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author john
  */
-public class Padlo extends Vybaveni<Padlo> {
+public class Padlo extends Vybaveni<Padlo> implements Serializable {
     private int delka;
     private int sirka_listu;
     private String typ;

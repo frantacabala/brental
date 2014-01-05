@@ -4,14 +4,17 @@
  */
 package org.lib.brental.gui.impl;
 
+import java.text.Collator;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.AbstractTableModel;
 import org.lib.brental.bussines.BrentalFacadeService;
 import org.lib.brental.gui.MainFrame;
@@ -56,7 +59,7 @@ public class LodModel extends AbstractTableModel implements Refreshable
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Lod r = (Lod) list.get(rowIndex);
+        Lod r = (Lod)list.get(rowIndex);
         switch (columnIndex) {
             case 0:
                 return r.getId().getId();
@@ -138,14 +141,14 @@ public class LodModel extends AbstractTableModel implements Refreshable
     public void refresh() throws BRentalException {
         Collection<Vybaveni> rs = BrentalFacadeService.getDefault().getLode();
         list = new ArrayList<>(rs);
-        
-        Collections.sort(list, new Comparator<Vybaveni>() {
-            @Override
-            public int compare(Vybaveni o1, Vybaveni o2) {
-                
-                return o1.getId().compareTo(o2.getId());
-            }
-        });
+//        JOptionPane.showMessageDialog(null,list.get(0).getNazev());
+//        Collections.sort(list, new Comparator<Lod>() {
+//            @Override
+//            public int compare(Lod o1, Lod o2) {
+//                
+//                return Collator.getInstance(new Locale("cz")).compare(o1.getNazev(),o2.getNazev());
+//            }
+//        });
         fireTableDataChanged();
     }
     

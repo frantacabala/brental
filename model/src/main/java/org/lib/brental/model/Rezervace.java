@@ -4,6 +4,7 @@
  */
 package org.lib.brental.model;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
  *
  * @author john
  */
-public class Rezervace {
+public class Rezervace implements Serializable{
     private RezervaceId id;
     private ZakaznikId id_zak;
     private FakturaId id_fak;
