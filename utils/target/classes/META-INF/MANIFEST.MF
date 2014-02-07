@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1388961812673
-Build-Jdk: 1.7.0_45
+Bnd-LastModified: 1391762236137
+Build-Jdk: 1.7.0_51
 Built-By: john
 Bundle-Activator: org.lib.brental.utils.UtilsActivator
 Bundle-ManifestVersion: 2
