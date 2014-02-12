@@ -77,8 +77,8 @@ public class MainFrame extends JFrame {
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent we) {
-                System.exit(-1);
-                //exit();
+                //System.exit(-1);
+                exit();
             }
         });
 
@@ -87,6 +87,8 @@ public class MainFrame extends JFrame {
         isLoaded = true;
 
     }
+    
+    
 
     public void showError(BRentalException ex) {
         showError(ex.toString());

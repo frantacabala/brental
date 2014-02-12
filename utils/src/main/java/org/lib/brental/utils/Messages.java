@@ -24,15 +24,18 @@ public enum Messages {
     Adresa,
     BRental;
     
-    public String getM(Object ... args){
-        ResourceBundle bnd = ResourceBundle.getBundle("org.lib.brental.utils.Messages",Locale.getDefault());
-        try{
-            String tmpl = bnd.getString(name());
-            return MessageFormat.format(tmpl, args);
-        }catch (MissingResourceException | IllegalArgumentException ex){
-            Logger.getLogger(getClass().getName()).log(Level.WARNING,"",ex);
-            return name().replace('_', ' ');
-        }
-    }
     
+    //public Messgaes
+    
+//    public String getM(Object ... msg){
+//                
+//        try{
+//            //String tmpl = msg.name();
+//          //  return MessageFormat.format(tmpl, msg);
+//        }catch (MissingResourceException | IllegalArgumentException ex){
+//            Logger.getLogger(getClass().getName()).log(Level.WARNING,"",ex);
+//            return name().replace('_', ' ');
+//        }
+//    }
+//    
 }

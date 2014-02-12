@@ -22,10 +22,10 @@ public class AppActivator implements BundleActivator {
                     MainFrame.getInstance().setVisible(true);
                     MainFrame.getInstance().actionsNotify();
                     if (BrentalFacadeService.getDefault().isAvailable()) {
-                      //  JOptionPane.showMessageDialog(null, "honov");
+                     
                         MainFrame.getInstance().refresh();
                     } else {
-                     //   JOptionPane.showMessageDialog(null, "neni hovno");
+                   
                     }
 
                 }
